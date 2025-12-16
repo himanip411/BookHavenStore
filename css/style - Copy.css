@@ -1,0 +1,1083 @@
+/* ==============================================================
+   ROOT COLORS — Based on Your Color Palette 2
+============================================================== */
+:root {
+    --primary: #2E2E4E;
+    --accent: #5C2E5C;
+    --blue-dark: #3F5461;
+    --green: #3E5641;
+    --red-accent: #742C36;
+
+    --text-dark: #2E2E4E;
+    --text-light: #ffffff;
+    --bg-light: #F5F2E7;
+}
+
+/* ==============================================================
+   GLOBAL RESET + PAGE STRUCTURE
+============================================================== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-family: Arial, sans-serif;
+}
+
+/* Page content wrapper → pushes footer to bottom */
+.page-content {
+    min-height: calc(100vh - 338px); /* 290 footer + 48 copyright */
+    padding-top: 120px; /* prevents header overlap */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* ==============================================================
+   TYPOGRAPHY OPTION 3
+============================================================== */
+
+.display-title { font-family: "Courier New", monospace; font-size: 40px; font-weight: bold; }
+.site-title    { font-family: Georgia, serif; font-size: 30px; font-weight: bold; }
+h2             { font-family: Arial, sans-serif; font-size: 25px; font-weight: bold; }
+.subtitle      { font-family: Arial, sans-serif; font-size: 15px; font-weight: bold; }
+p              { font-family: Arial, sans-serif; font-size: 16px; }
+.body-strong   { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+.caption       { font-family: Calibri, sans-serif; font-size: 11px; }
+
+/* ==============================================================
+   GLOBAL BUTTON ANIMATIONS
+============================================================== */
+
+button,
+.newsletter-btn,
+.hero-btn {
+    transition: all 0.25s ease;
+}
+
+button:hover,
+.newsletter-btn:hover,
+.hero-btn:hover {
+    transform: scale(1.05);
+    background-color: #5E1E24;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Shimmer Effect */
+.newsletter-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    transition: left 0.6s ease;
+}
+
+.newsletter-btn:hover::after {
+    left: 100%;
+}
+
+/* ==============================================================
+   HEADER — FIXED + SMOOTH SCROLL SHADOW
+============================================================== */
+
+.main-header {
+    background: #ffffff;
+    border-bottom: 1px solid #DDDDDD;
+    height: 100px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    transition: box-shadow 0.25s ease;
+}
+
+.main-header.scrolled {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 60px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    margin-left: 180px;
+}
+
+.nav-menu a {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary);
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.25s ease;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #742C36;
+    transition: width 0.25s ease;
+}
+
+.nav-menu a:hover {
+    color: #742C36;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Cart icon */
+.cart-icon {
+    width: 40px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0) invert(18%) sepia(24%) saturate(1600%) hue-rotate(335deg) brightness(90%);
+}
+
+.cart {
+    margin-right: 60px;
+}
+
+/* Header bottom stroke */
+.header-stroke {
+    width: 100%;
+    height: 2px;
+    background: #D9D9D9;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.08);
+}
+
+/* ==============================================================
+   FOOTER — Pixel Perfect 3-Column Figma Layout
+============================================================== */
+
+.footer {
+    background: #2E2E4E;
+    color: #E5E5EA;
+    min-height: 250px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 3 equal-width columns, evenly spaced */
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 80px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* column-gap: 100px; */
+    column-gap: 0px;
+
+    text-align: center;
+    align-items: flex-start;
+}
+
+/* Footer section titles */
+.footer-title {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 28px; /* perfect spacing below title */
+    color: #FFFFFF;
+}
+
+/* ==============================================================
+   NEWSLETTER COLUMN
+============================================================== */
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;        /* spacing between input + button */
+}
+
+/* Input field */
+.newsletter-input {
+    padding: 14px 18px;
+    width: 300px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+/* Subscribe button with shine */
+.newsletter-btn {
+    background: #742C36;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255,255,255,0.45) 50%,
+        transparent 100%
+    );
+    transition: left 0.6s ease;
+}
+
+.newsletter-btn:hover::after {
+    left: 100%;
+}
+
+.newsletter-btn:hover {
+    transform: scale(1.05);
+    background-color: #5E1E24;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+/* ==============================================================
+   QUICK LINKS COLUMN
+============================================================== */
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 14px;
+}
+
+.quick-links a {
+    color: #E5E5EA;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.25s ease;
+}
+
+/* Hover underline animation */
+.quick-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #742C36;
+    transition: width 0.25s ease-in-out;
+}
+
+.quick-links a:hover {
+    color: #742C36;
+}
+
+.quick-links a:hover::after {
+    width: 100%;
+}
+
+/* ==============================================================
+   SOCIAL MEDIA COLUMN
+============================================================== */
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; /* perfect spacing between icons */
+}
+
+.social-icons img {
+    width: 44px;         /* slightly bigger like Figma */
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.35));
+}
+
+/* ==============================================================
+   COPYRIGHT — Clean Bar
+============================================================== */
+
+.footer-bottom {
+    background: #1B1E28;
+    color: #E5E5EA;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   HERO SECTION — FIGMA PERFECT
+=========================== */
+
+/* Full hero area */
+.hero {
+    background: #5C2E5C;
+    height: 350px;                 /* Exact Figma height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;              /* Figma spacing (top + bottom) */
+}
+
+/* Grid container */
+.hero-container {
+    width: 1440px;                 /* Figma frame width */
+    height: 350px;                 /* Figma hero content height */
+    display: grid;
+    grid-template-columns: 1fr 510px;   /* 510px = right card width */
+    column-gap: 80px;              /* gap from Figma */
+    padding: 0 80px;               /* inside spacing */
+    align-items: top;
+}
+
+/* LEFT TEXT BLOCK */
+.hero-left {
+    width: 550px;                  /* matches text layout width */
+}
+
+.hero-title {
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0 0 0 0;
+    max-width: 450px; 
+    
+}
+
+.hero-text {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: regular;
+    color: #ffffff;
+    margin-bottom: 30px;
+    max-width: 450px;              /* Figma text width */
+}
+
+.hero-btn {
+    background: #742C36;
+    color: white;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+/* RIGHT IMAGE CARD */
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-box {
+    background: #F3E3E3;
+    width: 510px;                  /* EXACT placeholder size */
+    height: 400px;
+    padding: 0;                 /* balanced spacing */
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;              /* keeps image inside */
+}
+
+.hero-book-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* fills the area */
+    object-position: center;/* centers image */
+    border-radius: 12px;    /* optional – matches card */
+}
+
+/* ===========================
+   DIVIDER WITH SHADOW — FIXED
+=========================== */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: #000000; /* visible light grey */
+    margin: 0px 0 0px 0;      /* correct syntax */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ===========================
+   DIVIDER WITH SHADOW — FIXED
+=========================== */
+.section-Wdivider {
+    width: 100%;
+    height: 10px;
+    background: #C1CFD6; /* visible light grey */
+    margin: 0px 0 0px 0;      /* correct syntax */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ===========================
+   FEATURES STRIP SECTION
+=========================== */
+
+.features {
+    background: #3F5461;   /* blue tone from screenshot */
+    padding: 60px 0;
+}
+
+/* .features-container {
+    width: 1440px;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+} */
+/* Vertical Divider Between Columns */
+.features-container .feature-item {
+    position: relative;
+}
+
+.features-container .feature-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -30px;         /* adjust spacing */
+    top: 10%;
+    height: 80%;          /* nice long divider */
+    width: 2px;
+    background: rgba(255,255,255,0.4); /* subtle white line */
+}
+
+
+/* FEATURE ITEM */
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* ICON */
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* makes icon white */
+}
+
+
+/* TEXT */
+.feature-title {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #F5F5F7;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+}
+
+.feature-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.9;
+    margin: 0;
+}
+
+
+
+
+/* ===========================
+   FEATURES STRIP SECTION
+=========================== */
+
+.features {
+    background: #3D525D;   /* blue tone from screenshot */
+    padding: 60px 0;
+}
+
+.features-container {
+    width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 60px;
+    align-items: center;
+    padding: 0 60px;
+}
+
+
+/* FEATURE ITEM */
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* ICON */
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* makes icon white */
+}
+
+
+/* TEXT */
+.feature-title {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+}
+
+.feature-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* =====================================
+   FEATURED BOOKS SECTION — UPDATED
+===================================== */
+
+.featured-books {
+    padding: 80px 0;
+    background: #F5F2E7; 
+    text-align: center;
+}
+
+.featured-title {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2E2E4E;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 90px;
+    height: 4px;
+    background: #742C36;
+    margin: 0 auto 50px auto;
+    border-radius: 2px;
+}
+
+/* Books Grid */
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 1400px;
+    margin: auto;
+}
+
+/* Book Card */
+.book-card {
+    background: #ffffff;
+    padding-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+    transition: all 0.28s ease;
+}
+
+/* Hover animation */
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.22);
+}
+
+/* REAL IMAGE SUPPORT */
+.book-img {
+    width: 100%;
+    height: 240px;
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;                 /* IMPORTANT: hides overflow */
+    background: #C9D3D9;              /* fallback color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                /* REAL BOOK COVER STYLE */
+    object-position: center;
+    display: block;
+}
+
+/* Text fields */
+.book-name {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2E2E4E;
+    text-align: left;
+    padding: 20px 20px 10px 20px;
+    margin: 0;
+}
+
+.book-genre {
+    font-size: 16px;
+    color: #3D525D;
+    text-align: left;
+    margin: 0 20px;
+}
+
+.book-price {
+    font-size: 18px;
+    color: #AA1923;
+    font-weight: bold;
+    text-align: left;
+    margin: 12px 20px;
+}
+
+/* Add to Cart Button */
+.book-btn {
+    background: #742C36;
+    color: #ffffff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 15px auto 0 auto;
+    display: block;
+    transition: 0.25s ease;
+}
+
+.book-btn:hover {
+    background: #5E1E24;
+    transform: scale(1.05);
+}
+
+/* =====================================
+   FEATURED BOOKS SCROLL SECTION
+===================================== */
+
+.featured-books {
+    padding: 80px 0;
+    background: #F5F2E7;
+    text-align: center;
+}
+
+/* Center the title */
+.featured-title {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #131C26;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+
+/* Underline centered */
+.underline {
+    width: 90px;
+    height: 4px;
+    background: #742C36;
+    margin: 0 auto 40px auto;
+    border-radius: 2px;
+    display: block;
+}
+
+/* Horizontal Scroll Wrapper */
+.books-scroll {
+    display: flex;
+    gap: 30px;
+
+    /* center cards under heading */
+    justify-content: center;
+
+    /* horizontal scroll */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    /* center the scroll container itself */
+    max-width: 1400px;
+    margin: 0 auto 60px auto;
+
+    padding: 10px 20px;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+}
+
+.books-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Book Card */
+.book-card {
+    min-width: 300px;
+    max-width: 300px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding-bottom: 30px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 22px rgba(0,0,0,0.22);
+}
+
+/* Exact Figma 300x240 image frame */
+.book-img-frame {
+    width: 100%;
+    height: 240px;
+    background: #EDEDED;
+    border-radius: 14px 14px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.book-cover {
+    width: auto;
+    height: 90%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Book Text Info */
+.book-name {
+    font-family: Arial, serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-weight: Auto;
+    color: #131C26;
+    text-align: left;
+}
+
+.book-genre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-weight: regular;
+    margin: 0 20px;
+    color: #3F5461;
+    text-align: left;
+}
+
+.book-price {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #742C36;
+    text-align: left;
+}
+
+/* Add to cart button */
+.book-btn {
+    background: #742C36;
+    color: #ffffff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px auto 0 auto;
+    display: block;
+    transition: 0.25s ease;
+}
+
+.book-btn:hover {
+    background: #5E1E24;
+    transform: scale(1.05);
+}
+
+/* =====================================
+   SHOPPING PERKS SECTION
+===================================== */
+
+.shopping-perks {
+    background: #5C2E5C;
+    padding: 70px 0;
+}
+
+.perks-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 60px;
+
+    align-items: start;
+}
+
+/* Perk Item */
+.perk-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Icons */
+.perk-icon {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* makes icon white */
+}
+
+/* Title */
+.perk-title {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+/* Description */
+.perk-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Vertical dividers between perks */
+.perk-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-right: 40px;
+    position: relative;
+}
+
+/* Vertical line */
+.perk-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    height: 60px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.25);  /* Soft white divider */
+    border-radius: 2px;
+}
+
+/* =====================================
+   CATEGORY SCROLL SECTION
+===================================== */
+
+.category-section {
+    padding: 80px 0;
+    background: #F5F2E7;
+    text-align: center;
+}
+
+/* Center Title */
+.category-title {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2E2E4E;
+}
+
+.category-underline {
+    width: 90px;
+    height: 4px;
+    background: #742C36;
+    margin: 10px auto 40px auto;
+    border-radius: 2px;
+}
+
+/* --- PURE HORIZONTAL SCROLL --- */
+.category-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 0 40px;
+
+    white-space: nowrap;
+}
+
+/* Hide scrollbar but keep scroll working */
+.category-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.category-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Cards */
+.category-card {
+    width: 300px;
+    flex: 0 0 auto; /* keep row layout */
+
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 22px rgba(0,0,0,0.22);
+}
+
+.category-img-frame {
+    width: 100%;
+    height: 230px;
+    background: #C9D3D9;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* ==============================================================
+   RESPONSIVE
+============================================================== */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        margin-left: 0;
+        gap: 15px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    .newsletter-row {
+        flex-direction: column;
+    }
+}
+
+

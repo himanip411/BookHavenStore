@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore | Home</title>
+
+    <!-- Desktop Base Styles -->
+    <link rel="stylesheet" href="css/desktop.css">
+
+    <!-- Tablet Portrait Overrides -->
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 769px) and (max-width: 1024px)">
+
+    <!-- Mobile Overrides -->
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 768px)">
+</head>
+
+<body>
+
+<!-- ======================= FIXED HEADER ======================= -->
+<header class="main-header">
+    <div class="header-container">
+
+        <!-- HAMBURGER – visible only on mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- LOGO + TITLE -->
+        <div class="logo-section">
+            <img src="assets/images/logo.png" class="logo" alt="Book Haven Logo">
+            <h1 class="site-title">Book Haven Bookstore</h1>
+        </div>
+
+        <!-- DESKTOP NAV MENU -->
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+        </nav>
+
+        <!-- CART ICON -->
+        <div class="cart">
+            <img src="assets/images/cart.png" class="cart-icon" alt="Cart">
+        </div>
+
+    </div>
+</header>
+
+<!-- MOBILE OVERLAY -->
+<div class="menu-overlay"></div>
+
+<!-- MOBILE SLIDE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu-btn">✕</button>
+
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Events</a>
+</div>
+
+<!-- HEADER DIVIDER -->
+<div class="header-stroke"></div>
+
+<!-- ======================= PAGE CONTENT WRAPPER ======================= -->
+<div class="page-content">
+   
+    <section class="about-hero">
+    <div class="about-hero-content">
+        <h1>Events & Collaborations</h1>
+        <p>Connecting Readers, Authors & Our Community</p>
+    </div>
+</section>
+
+    <div class="section-divider"></div>
+    <div class="section-Wdivider"></div>
+
+    <section class="events-section">
+    <h2 class="events-title">Upcoming Events</h2>
+
+    <div class="events-container">
+
+        <!-- Event Card -->
+        <div class="event-card">
+            <div class="event-img">
+                <img src="assets/images/Client3_Book1.png" alt="Event Book">
+            </div>
+
+            <div class="event-info">
+                <h3 class="event-name">Author Meet & Greet – Emily Woods</h3>
+                <p class="event-date">October 12, 2025</p>
+
+                <p class="event-desc">
+                    Join us for an afternoon discussion and signing with acclaimed novelist Emily Woods.
+                </p>
+
+                <button class="btn-primary event-btn">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Duplicate Cards for More Items -->
+        <div class="event-card">
+            <div class="event-img">
+                <img src="assets/images/Client3_Book3.png" alt="Event Book">
+            </div>
+
+            <div class="event-info">
+                <h3 class="event-name">Children’s Storytime – Adventure Hour</h3>
+                <p class="event-date">November 20, 2025</p>
+
+                <p class="event-desc">
+                    A fun storytelling session for kids, full of imagination, laughter, and creative reading games.
+                </p>
+
+                <button class="btn-primary event-btn">Learn More</button>
+            </div>
+        </div>
+
+         <div class="event-card">
+            <div class="event-img">
+                <img src="assets/images/Client3_Notebook.png" alt="Event Book">
+            </div>
+
+            <div class="event-info">
+                <h3 class="event-name">Book Haven Writing Workshop – Crafting Characters</h3>
+                <p class="event-date">December 2, 2025</p>
+
+                <p class="event-desc">
+                    A hands-on workshop teaching character development for aspiring writers, hosted by expert editors.
+                </p>
+
+                <button class="btn-primary event-btn">Learn More</button>
+            </div>
+        </div>
+
+         <div class="event-card">
+            <div class="event-img">
+                <img src="assets/images/Client3_Book2.png" alt="Event Book">
+            </div>
+
+            <div class="event-info">
+                <h3 class="event-name">Biker Tales Live – Meet the Author of Glory Riders</h3>
+                <p class="event-date">December 28, 2025</p>
+
+                <p class="event-desc">
+                    Join us for an exciting evening with the author of Glory Riders as they discuss the inspiration behind the novel, the biker world, and the journey of writing fast-paced adventure fiction.
+                </p>
+
+                <button class="btn-primary event-btn">Learn More</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="community-event-section">
+    <div class="community-event-card">
+
+        <!-- LEFT IMAGE -->
+        <div class="community-event-image">
+            <img src="assets/images/book_swap.png" alt="Community Book Swap">
+        </div>
+
+        <!-- RIGHT TEXT -->
+        <div class="community-event-info">
+            <h2>Community Book Swap Day</h2>
+
+            <p class="event-date">January 10, 2026</p>
+
+            <p class="event-desc">
+                Join our local book-sharing event where readers bring a book they love 
+                and exchange it with another community member. A joyful way to connect, 
+                discover new stories, and promote reading across all ages.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <h2 class="testimonials-title">What Our Community Says</h2>
+
+    <div class="testimonials-scroll">
+
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “Book Haven hosts wonderful events — it’s my favorite place to connect with authors!”
+            </p>
+            <p class="testimonial-author">– Jane D.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “The community workshops helped me improve my writing. I always leave inspired!”
+            </p>
+            <p class="testimonial-author">– Mark R.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “I love the Book Swap Day! I discovered amazing books and made new friends.”
+            </p>
+            <p class="testimonial-author">– Himani P.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “The staff is friendly and their book selections are wonderfully curated!”
+            </p>
+            <p class="testimonial-author">– Ryan W.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “My kids enjoy the children's storytelling events every month!”
+            </p>
+            <p class="testimonial-author">– Lina P.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+</div>
+<!-- ======================= END PAGE CONTENT ======================= -->
+<!-- ========================= CART MODAL ========================= -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+
+        <h2 class="cart-title">Your Cart</h2>
+
+        <!-- Scrollable cart items -->
+        <div id="cartItems" class="cart-items-container">
+            <!-- Cart items will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Buttons -->
+        <div class="cart-buttons">
+            <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            <button id="closeCartBtn" class="close-cart-btn">Close</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========================= FOOTER (TOP SECTION) ========================= -->
+<!-- ========================= FOOTER ========================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section newsletter">
+            <h3 class="footer-title">Subscribe to Our Newsletter</h3>
+            <div class="newsletter-row">
+                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer-section quick-links">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social">
+            <h3 class="footer-title">Connect with Us</h3>
+            <div class="social-icons">
+                <img src="assets/images/fb.png" alt="Facebook">
+                <img src="assets/images/ig.png" alt="Instagram">
+                <img src="assets/images/x.png" alt="Twitter-X">
+                <img src="assets/images/li.png" alt="LinkedIn">
+                <img src="assets/images/yt.png" alt="YouTube">
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<div class="footer-bottom">
+    © 2025 Book Haven Bookstore. All rights reserved
+</div>
+
+<script src="js/mobile-header.js"></script>
+<script src="js/cart.js"></script>
+<script>
+const slider = document.querySelector('.testimonials-scroll');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    e.preventDefault();
+});
+
+slider.addEventListener('mouseup', () => isDown = false);
+slider.addEventListener('mouseleave', () => isDown = false);
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    const x = e.pageX - slider.offsetLeft;
+    slider.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    e.preventDefault();
+});
+
+slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+}, { passive: false });
+
+slider.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    slider.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    e.preventDefault();
+}, { passive: false });
+
+slider.addEventListener('touchend', () => isDown = false);
+</script>
+
+
+</body>
+</html>

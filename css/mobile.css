@@ -1,0 +1,401 @@
+/* ==============================================================
+   MOBILE VERSION — CLEAN + ALIGNED WITH DESKTOP
+============================================================== */
+@media (max-width: 768px) {
+
+    /* Disable horizontal scroll globally */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100%;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+    .nav-menu { display: none !important; }
+
+    .main-header {
+        height: 70px;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-container {
+        padding: 0 14px;
+        justify-content: space-between;
+    }
+
+    /* =========================
+       HAMBURGER
+    ========================== */
+    .hamburger {
+        display: flex !important;
+        width: 26px;
+        height: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        height: 3px;
+        background: var(--primary);
+        border-radius: 4px;
+        transition: 0.3s ease;
+    }
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+    .menu-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100dvh;
+        background: rgba(0,0,0,0.45);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .35s ease;
+        backdrop-filter: blur(4px);
+        z-index: 1500;
+    }
+    .menu-overlay.show { opacity: 1; pointer-events: auto; }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        max-width: 330px;
+        height: 100dvh;
+        background: #fff;
+        padding: 70px 28px 40px;
+        border-radius: 0 20px 20px 0;
+        transition: left .45s cubic-bezier(.23,1,.32,1);
+        z-index: 2000;
+    }
+    .mobile-menu.open { left: 0; }
+
+    .mobile-menu a {
+        display: block;
+        padding: 16px 0;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #ececec;
+    }
+
+    /* =========================
+         HERO SECTION
+    ========================== */
+
+    .hero {
+        padding: 30px 20px;
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse; /* image first */
+        gap: 20px;
+        height: auto !important;
+        padding: 0;
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-image-box {
+        width: 100%;
+        height: 230px;
+        border-radius: 14px;
+    }
+
+    .hero-left {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        color: #ffffff;      /* FIXED — match desktop */
+    }
+
+    .hero-text {
+        font-size: 14px;
+        color: #ffffff;      /* FIXED */
+        opacity: .9;
+        margin-bottom: 20px;
+    }
+
+    .hero-btn {
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    /* =========================
+       FEATURES SECTION
+    ========================== */
+
+    .features {
+        padding: 40px 0;
+        height: auto;
+    }
+
+    .features-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .feature-item::after { display: none !important; }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .feature-text {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    /* =============================
+       FEATURED BOOKS SECTION
+    ============================== */
+    .featured-books {
+        padding: 50px 0;
+        height: auto;
+    }
+
+    .featured-title {
+        font-size: 24px;
+    }
+
+    .underline {
+        width: 60px;
+        height: 3px;
+        margin-bottom: 25px;
+    }
+
+    /* Turn cards vertical */
+    .books-scroll {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        overflow: visible !important;
+        padding: 0 16px;
+    }
+
+    .book-card {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .book-img-frame {
+        height: 200px;
+    }
+
+    .book-name {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+
+    .book-genre,
+    .book-price {
+        padding: 0 12px;
+        font-size: 14px;
+    }
+
+    /* =============================
+        CATEGORY SCROLL SECTION
+    ============================== */
+
+    .category-section {
+        padding: 40px 0;
+        height: auto !important;
+    }
+
+    .category-scroll {
+        padding: 10px 16px 20px;
+        width: 100%;
+        overflow-x: auto;  /* KEEP horizontal scroll ONLY HERE */
+        display: flex;
+        gap: 18px;
+    }
+
+    .category-card {
+        width: 220px;
+        min-width: 220px;
+        height: auto;
+    }
+
+    /* =============================
+       SHOPPING PERKS
+    ============================== */
+    .shopping-perks {
+        padding: 50px 0;
+        height: auto;
+    }
+
+    .perks-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .perk-item::after { display: none !important; }
+
+    /* =============================
+       GALLERY LISTS
+    ============================== */
+
+    .gallery-books {
+        padding: 40px 0;
+        height: auto !important;
+    }
+
+    .gallery-books-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 25px;
+    }
+
+    .gallery-book-card {
+        width: 100%;
+    }
+
+    /* =============================
+       TESTIMONIALS
+    ============================== */
+    .testimonials-section {
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .testimonials-scroll {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: visible;
+    }
+
+    /* ===========================
+   MOBILE FOOTER FIX
+=========================== */
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 40px 20px;
+        background: #2E2E4E;
+        color: #E5E5EA;
+        text-align: center;
+        height: auto !important;
+    }
+
+    /* Convert desktop 3-column grid → stacked clean vertical layout */
+    .footer-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 40px; /* spacing between Newsletter / Quick Links / Social */
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    /* Newsletter section */
+    .newsletter {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .newsletter-row {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .newsletter-input {
+        width: 100% !important;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .newsletter-btn {
+        width: 100% !important;
+        padding: 14px 0;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    /* Quick Links */
+    .quick-links {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .quick-links ul {
+        padding: 0;
+    }
+
+    .quick-links li {
+        margin: 8px 0;
+    }
+
+    .quick-links a {
+        font-size: 18px;
+    }
+
+    /* Social Icons */
+    .social {
+        width: 100%;
+        max-width: 240px;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center !important;
+        gap: 16px;
+    }
+
+    .social-icons img {
+        width: 38px;
+    }
+
+    /* Footer Bottom Bar */
+    .footer-bottom {
+        background: #1B1E28;
+        padding: 12px 10px;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+
+}

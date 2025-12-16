@@ -1,0 +1,111 @@
+/* ==========================================================
+   TABLET — portrait only (769px to 1024px)
+========================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* ---------------- HEADER ---------------- */
+    .main-header {
+        height: 90px;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+        margin: 0 6px;
+    }
+
+    .cart-icon {
+        width: 32px;
+    }
+
+    /* ---------------- HERO ---------------- */
+    .hero {
+        padding: 80px 0;
+        height: auto;
+    }
+
+    .hero-container {
+        width: 100%;
+        padding: 0 40px;
+        grid-template-columns: 1fr 380px; /* smaller right box */
+        column-gap: 40px;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        max-width: 100%;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-image-box {
+        width: 380px;
+        height: 300px;
+    }
+
+    /* ---------------- FEATURES ---------------- */
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        column-gap: 40px;
+        padding: 0 40px;
+    }
+
+    .feature-item {
+        gap: 16px;
+    }
+
+    /* ---------------- FEATURED BOOKS GRID ---------------- */
+    .books-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    .book-card {
+        min-width: auto;
+    }
+
+    /* ---------------- SHOPPING PERKS ---------------- */
+    .perks-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 40px;
+        row-gap: 40px;
+    }
+
+    .perk-item {
+        padding-right: 20px;
+    }
+
+    /* ---------------- CATEGORY SCROLL ---------------- */
+    .category-card {
+        width: 260px;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    .footer-container {
+        padding: 0 40px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-title {
+        font-size: 20px;
+    }
+}

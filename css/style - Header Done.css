@@ -1,0 +1,320 @@
+/* -------------------------------------------------
+   ROOT COLORS — Based on Your Color Palette 2
+-------------------------------------------------- */
+:root {
+    --primary: #2E2E4E;            /* Midnight Manuscript */
+    --accent: #5C2E5C;             /* Regal Quill */
+    --blue-dark: #3F5461;          /* Literature Blue */
+    --green: #3E5641;              /* Book Worm */
+    --red-accent: #742C36;         /* Romantic Red */
+
+    --text-dark: #2E2E4E;
+    --text-light: #ffffff;
+    --bg-light: #F5F2E7;
+}
+
+/* -------------------------------------------------
+   GLOBAL RESET
+-------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-family: Arial, sans-serif;   /* default body font */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* -------------------------------------------------
+   TYPOGRAPHY OPTION 3 (Assignment Required)
+-------------------------------------------------- */
+
+/* Display (40px Courier New Bold) — for hero main title */
+.display-title {
+    font-family: "Courier New", monospace;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Header Title Large — Georgia Bold 30px */
+.site-title {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--accent);
+    margin: 0;
+}
+
+/* Section Titles — Arial Bold 25px */
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Subtitles — Arial Bold 15px */
+.subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Body text — Arial Normal 16px */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Body Strong — Arial Bold 16px */
+.body-strong {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Captions — Calibri Normal 11px */
+.caption {
+    font-family: Calibri, sans-serif;
+    font-size: 11px;
+}
+
+/* ALL buttons animation */
+button,
+.newsletter-btn,
+.hero-btn {
+    transition: all 0.25s ease;
+}
+
+/* Hover animation */
+button:hover,
+.newsletter-btn:hover,
+.hero-btn:hover {
+    transform: scale(1.05);
+    background-color: #5E1E24; /* darker Romantic Red */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+
+/* -------------------------------------------------
+   HEADER — Pixel Perfect Figma Match (FINAL VERSION)
+-------------------------------------------------- */
+
+/* Full header area height: EXACT 100px */
+.main-header {
+    background: #ffffff;
+    border-bottom: 1px solid #DDDDDD;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+/* Container with equal left/right spacing */
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO + TITLE block */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 60px;
+}
+
+/* Logo size */
+.logo {
+    width: 80px;
+}
+
+/* TITLE */
+.site-title {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--accent);
+    margin: 0;
+}
+
+/* NAV LINKS */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    margin-left: 180px;
+}
+
+/* Base nav link styling */
+.nav-menu a {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary);
+    position: relative;              /* required for underline */
+    padding-bottom: 4px;             /* space for underline */
+    transition: color 0.25s ease;    /* smooth hover fade */
+}
+
+/* Underline (hidden initially) */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #742C36;            /* underline color */
+    transition: width 0.25s ease-in-out;
+}
+
+/* Hover color */
+.nav-menu a:hover {
+    color: #742C36;
+}
+
+/* Hover underline */
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* CART ICON */
+.cart-icon {
+    width: 40px;
+    cursor: pointer;
+}
+/* Cart icon hover animation */
+.cart-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) 
+            invert(18%) sepia(24%) saturate(1600%) 
+            hue-rotate(335deg) brightness(90%) contrast(90%);
+    transition: all 0.25s ease;
+}
+
+/* Cart wrapper spacing */
+.cart {
+    margin-right: 60px;
+}
+
+/* -------------------------------------------------
+   HEADER BOTTOM STROKE — With Figma-style Shadow
+-------------------------------------------------- */
+.header-stroke {
+    width: 100%;
+    height: 2px;
+    background: #D9D9D9;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* -------------------------------------------------
+   HERO SECTION (Matches Figma)
+-------------------------------------------------- */
+
+.hero {
+    padding: 80px 20px;
+    background: var(--accent);
+    color: var(--text-light);
+    text-align: left;
+}
+
+.hero .container {
+    max-width: 1100px;
+}
+
+/* Hero button */
+.hero-btn {
+    background: var(--red-accent);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------
+   LAYOUT HELPERS
+-------------------------------------------------- */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* For Gallery or Books Grid */
+.grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* -------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+    background: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE — MOBILE FIX
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .display-title {
+        font-size: 30px;
+    }
+
+    .logo {
+        width: 50px;  /* smaller logo for mobile */
+    }
+}
+
+/* -------------------------------------------------
+   RESPONSIVE — DESKTOP GRID
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

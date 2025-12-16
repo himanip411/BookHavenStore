@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore | Home</title>
+
+    <!-- Desktop Base Styles -->
+    <link rel="stylesheet" href="css/desktop.css">
+
+    <!-- Tablet Portrait Overrides -->
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 769px) and (max-width: 1024px)">
+
+    <!-- Mobile Overrides -->
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 768px)">
+</head>
+
+<body>
+
+<!-- ======================= FIXED HEADER ======================= -->
+<header class="main-header">
+    <div class="header-container">
+
+        <!-- HAMBURGER – visible only on mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- LOGO + TITLE -->
+        <div class="logo-section">
+            <img src="assets/images/logo.png" class="logo" alt="Book Haven Logo">
+            <h1 class="site-title">Book Haven Bookstore</h1>
+        </div>
+
+        <!-- DESKTOP NAV MENU -->
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+        </nav>
+
+        <!-- CART ICON -->
+        <div class="cart">
+            <img src="assets/images/cart.png" class="cart-icon" alt="Cart">
+        </div>
+
+    </div>
+</header>
+
+<!-- MOBILE OVERLAY -->
+<div class="menu-overlay"></div>
+
+<!-- MOBILE SLIDE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu-btn">✕</button>
+
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Events</a>
+</div>
+
+<!-- HEADER DIVIDER -->
+<div class="header-stroke"></div>
+
+
+<!-- ======================= PAGE CONTENT ======================= -->
+<div class="page-content">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+        <div class="hero-container">
+
+            <div class="hero-left">
+                <h1 class="hero-title">Discover Your Next Favorite Book</h1>
+                <p class="hero-text">Explore thousands of stories — from timeless classics to modern favorites.</p>
+                <button class="hero-btn">Shop Now</button>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-image-box">
+                    <img src="assets/images/Client3_Book1.png" class="hero-book-img" alt="Featured Book">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <div class="section-Wdivider"></div>
+
+
+    <!-- ======================= FEATURES ======================= -->
+    <section class="features">
+        <div class="features-container">
+
+            <div class="feature-item">
+                <img src="assets/icons/book.svg" class="feature-icon">
+                <div>
+                    <h3 class="feature-title">Free Membership</h3>
+                    <p class="feature-text">Join & get 10% off first order</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="assets/icons/truck.svg" class="feature-icon">
+                <div>
+                    <h3 class="feature-title">Free Delivery</h3>
+                    <p class="feature-text">On orders above $35</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="assets/icons/card.svg" class="feature-icon">
+                <div>
+                    <h3 class="feature-title">Secure Payment</h3>
+                    <p class="feature-text">100% Safe Checkout</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="assets/icons/gift.svg" class="feature-icon">
+                <div>
+                    <h3 class="feature-title">Gift Cards Available</h3>
+                    <p class="feature-text">Share the joy of reading</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <div class="section-Wdivider"></div>
+
+
+    <!-- ======================= FEATURED BOOKS ======================= -->
+    <section class="featured-books">
+        <h2 class="featured-title">Featured Books – Top Picks</h2>
+        <div class="underline"></div>
+
+        <div class="books-scroll">
+
+            <div class="book-card">
+                <div class="book-img-frame">
+                    <img class="book-cover" src="assets/images/Client3_Book1.png">
+                </div>
+                <h3 class="book-name">Brie Mine 4Ever</h3>
+                <p class="book-genre">Cooking</p>
+                <p class="book-price">$ 12.99</p>
+                <button class="book-btn">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-img-frame">
+                    <img class="book-cover" src="assets/images/Client3_Book2.png">
+                </div>
+                <h3 class="book-name">Glory Riders</h3>
+                <p class="book-genre">Advanture</p>
+                <p class="book-price">$ 9.99</p>
+                <button class="book-btn">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-img-frame">
+                    <img class="book-cover" src="assets/images/Client3_Book3.png">
+                </div>
+                <h3 class="book-name">Sorcerer’s Shadowed Chronicles</h3>
+                <p class="book-genre">Fantancy</p>
+                <p class="book-price">$ 15.99</p>
+                <button class="book-btn">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <div class="section-Wdivider"></div>
+
+
+    <!-- ======================= PERKS ======================= -->
+    <section class="shopping-perks">
+        <div class="perks-container">
+
+            <div class="perk-item">
+                <img src="assets/icons/clock.svg" class="perk-icon">
+                <div>
+                    <h3 class="perk-title">24/7 Customer Support</h3>
+                    <p class="perk-text">Always here to help you find your next great read.</p>
+                </div>
+            </div>
+
+            <div class="perk-item">
+                <img src="assets/icons/eco.svg" class="perk-icon">
+                <div>
+                    <h3 class="perk-title">Eco-Friendly Packaging</h3>
+                    <p class="perk-text">Sustainable materials for a greener tomorrow.</p>
+                </div>
+            </div>
+
+            <div class="perk-item">
+                <img src="assets/icons/rewards.svg" class="perk-icon">
+                <div>
+                    <h3 class="perk-title">Reward Points</h3>
+                    <p class="perk-text">Earn points with every purchase and save more.</p>
+                </div>
+            </div>
+
+            <div class="perk-item">
+                <img src="assets/icons/returns.svg" class="perk-icon">
+                <div>
+                    <h3 class="perk-title">Easy Returns</h3>
+                    <p class="perk-text">Hassle-free 30-day return on all books.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================= CATEGORY SCROLL ======================= -->
+    <section class="category-section">
+        <h2 class="category-title">Browse by Category</h2>
+        <div class="category-underline"></div>
+
+        <div class="category-scroll">
+
+            <div class="category-card">
+                <div class="category-img-frame">
+                    <img src="assets/images/Client3_Book1.png" class="category-img">
+                </div>
+                <h3 class="category-name">Books</h3>
+                <p class="category-text">Stories, knowledge & imagination</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-img-frame">
+                    <img src="assets/images/Client3_Magazine1.png" class="category-img">
+                </div>
+                <h3 class="category-name">Magazines</h3>
+                <p class="category-text">Lifestyle, travel & hobby collections</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-img-frame">
+                    <img src="assets/images/Client3_ToteBag.png" class="category-img">
+                </div>
+                <h3 class="category-name">Tote Bags</h3>
+                <p class="category-text">Carry your love for reading everywhere</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-img-frame">
+                    <img src="assets/images/Client3_Notebook.png" class="category-img">
+                </div>
+                <h3 class="category-name">Stationery</h3>
+                <p class="category-text">Notebooks & essentials for your writing journey</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-img-frame">
+                    <img src="assets/images/Client3_Stickers.png" class="category-img">
+                </div>
+                <h3 class="category-name">Stickers & Accessories</h3>
+                <p class="category-text">Creative add-ons to express your bookish style</p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-Wdivider"></div>
+
+</div>
+<!-- PAGE CONTENT END -->
+
+<!-- ========================= CART MODAL ========================= -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+
+        <h2 class="cart-title">Your Cart</h2>
+
+        <!-- Scrollable cart items -->
+        <div id="cartItems" class="cart-items-container">
+            <!-- Cart items will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Buttons -->
+        <div class="cart-buttons">
+            <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            <button id="closeCartBtn" class="close-cart-btn">Close</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section newsletter">
+            <h3 class="footer-title">Subscribe to Our Newsletter</h3>
+            <div class="newsletter-row">
+                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer-section quick-links">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social">
+            <h3 class="footer-title">Connect with Us</h3>
+            <div class="social-icons">
+                <img src="assets/images/fb.png" alt="Facebook">
+                <img src="assets/images/ig.png" alt="Instagram">
+                <img src="assets/images/x.png" alt="Twitter-X">
+                <img src="assets/images/li.png" alt="LinkedIn">
+                <img src="assets/images/yt.png" alt="YouTube">
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<div class="footer-bottom">
+    © 2025 Book Haven Bookstore. All rights reserved
+</div>
+
+<!-- ========================= TOAST NOTIFICATION ========================= -->
+<div id="toast" class="toast">
+    <span id="toast-icon" class="toast-icon"></span>
+    <span id="toast-msg" class="toast-message"></span>
+</div>
+<!-- MOBILE MENU SCRIPT -->
+<script src="js/mobile-header.js"></script>
+<script src="js/cart.js"></script>
+<!-- CATEGORY DRAG SCROLL -->
+<script>
+const slider = document.querySelector('.category-scroll');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    e.preventDefault();
+});
+
+slider.addEventListener('mouseup', () => isDown = false);
+slider.addEventListener('mouseleave', () => isDown = false);
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    const x = e.pageX - slider.offsetLeft;
+    slider.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    e.preventDefault();
+});
+
+slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+}, { passive: false });
+
+slider.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    slider.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    e.preventDefault();
+}, { passive: false });
+
+slider.addEventListener('touchend', () => isDown = false);
+</script>
+
+</body>
+</html>
+
+

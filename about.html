@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore | Home</title>
+
+    <!-- Desktop Base Styles -->
+    <link rel="stylesheet" href="css/desktop.css">
+
+    <!-- Tablet Portrait Overrides -->
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 769px) and (max-width: 1024px)">
+
+    <!-- Mobile Overrides -->
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 768px)">
+</head>
+
+<body>
+
+<!-- ======================= FIXED HEADER ======================= -->
+<header class="main-header">
+    <div class="header-container">
+
+        <!-- HAMBURGER – visible only on mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- LOGO + TITLE -->
+        <div class="logo-section">
+            <img src="assets/images/logo.png" class="logo" alt="Book Haven Logo">
+            <h1 class="site-title">Book Haven Bookstore</h1>
+        </div>
+
+        <!-- DESKTOP NAV MENU -->
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+        </nav>
+
+        <!-- CART ICON -->
+        <div class="cart">
+            <img src="assets/images/cart.png" class="cart-icon" alt="Cart">
+        </div>
+
+    </div>
+</header>
+
+<!-- MOBILE OVERLAY -->
+<div class="menu-overlay"></div>
+
+<!-- MOBILE SLIDE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu-btn">✕</button>
+
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Events</a>
+</div>
+
+<!-- HEADER DIVIDER -->
+<div class="header-stroke"></div>
+
+<!-- ======================= PAGE CONTENT WRAPPER ======================= -->
+<div class="page-content">
+
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>About Book Haven Bookstore</h1>
+            <p>Your Local Literary Haven Online</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <div class="section-Wdivider"></div>
+
+<section class="our-story">
+    <div class="story-container">
+
+        <div class="story-text">
+            <h2>Our Story</h2>
+
+            <p>
+                Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies. 
+                With a deep-rooted commitment to fostering literary exploration and a love for reading, 
+                it is embarking on the creation of an online presence that mirrors its dedication to the world of words.
+            </p>
+
+            <p>
+                Its target audience comprises avid readers, students, and individuals in search of high-quality reading materials and office essentials. 
+                Book Haven Bookstore’s website theme revolves around celebrating the written word.
+            </p>
+        </div>
+
+        <div class="story-image">
+            <img src="assets/images/story-books.png" alt="Bookshelf">
+        </div>
+
+    </div>
+</section>
+
+
+<section class="about-two-columns">
+    <div class="two-col-container">
+
+        <!-- LEFT: Custom Order Form -->
+        <div class="col form-col">
+            <h2>We’d Love to Hear From You</h2>
+
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="emailAddress" placeholder="Email Address" required>
+                <textarea id="orderMessage" placeholder="Message / Custom Order Details" rows="6" required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- RIGHT: Hours of Operation -->
+        <div class="col hours-col">
+            <h2>Hours of Operation</h2>
+
+            <div class="hours-box">
+                <p><strong>Monday–Friday:</strong> 9 a.m. – 8 p.m.</p>
+                <p><strong>Saturday:</strong> 10 a.m. – 6 p.m.</p>
+                <p><strong>Sunday:</strong> 11 a.m. – 5 p.m.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</div>
+<!-- ======================= END PAGE CONTENT ======================= -->
+
+<!-- ========================= CART MODAL ========================= -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+
+        <h2 class="cart-title">Your Cart</h2>
+
+        <div id="cartItems" class="cart-items-container"></div>
+
+        <div class="cart-buttons">
+            <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            <button id="closeCartBtn" class="close-cart-btn">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section newsletter">
+            <h3 class="footer-title">Subscribe to Our Newsletter</h3>
+            <div class="newsletter-row">
+                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer-section quick-links">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social">
+            <h3 class="footer-title">Connect with Us</h3>
+            <div class="social-icons">
+                <img src="assets/images/fb.png" alt="Facebook">
+                <img src="assets/images/ig.png" alt="Instagram">
+                <img src="assets/images/x.png" alt="Twitter-X">
+                <img src="assets/images/li.png" alt="LinkedIn">
+                <img src="assets/images/yt.png" alt="YouTube">
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<div class="footer-bottom">
+    © 2025 Book Haven Bookstore. All rights reserved
+</div>
+
+<!-- ========================= TOAST NOTIFICATION ========================= -->
+<div id="toast" class="toast">
+    <span id="toast-icon" class="toast-icon"></span>
+    <span id="toast-msg" class="toast-message"></span>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/mobile-header.js"></script>
+<script src="js/cart.js"></script>
+
+<!-- CONTACT FORM HANDLER (USES TOAST) -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("emailAddress").value.trim();
+    const message = document.getElementById("orderMessage").value.trim();
+
+    const orderData = {
+        name,
+        email,
+        message,
+        date: new Date().toLocaleString()
+    };
+
+    localStorage.setItem("customerOrder", JSON.stringify(orderData));
+
+    showToast("Your message has been saved! Thank you.", "success");
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
